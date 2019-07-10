@@ -54,5 +54,8 @@ while True:
     elif token_list[0].startswith("squ"):
         print(square(token_list[1]))
 
-    
+    elif token_list[0].startswith("cub"):
+        print(cube(token_list[1]))
+
+
 
