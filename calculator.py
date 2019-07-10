@@ -27,13 +27,17 @@ while True:
     user_prompt = input("> ").lower()
 #     tokenize input
     #
-    token = user_prompt.split(" ") #list of inputs
+    token_list_list = user_prompt.split(" ") #list of 
+
+    for idx, item in enumerate(token_list_list):
+        if item.isdigit():
+            token_list_list[idx] = int(token_list_list[idx])
+
 #     if the first token is "q":
-    if token[0].startswith("q"):
+    if token_list_list[0].startswith("q"):
         break
 #         quit
 #     else:
 #         decide which math function to call based on first token
-    elif token[0].startswith("add") or token[0] == "+":
-        print(add(int(token[1]), int(token[2])))
-        
+    elif token_list_list[0].startswith("add") or token_list[0] == "+":
+        print(add(token_list[1], token_list[2]))
