@@ -47,6 +47,12 @@ while True:
 
     elif token_list[0].startswith("mul") or token_list[0] == "*":
         print(multiply(token_list[1], token_list[2]))
+
     elif token_list[0].startswith("div") or token_list[0] == "/":
         print(divide(token_list[1], token_list[2]))
+
+    elif token_list[0].startswith("squ"):
+        print(square(token_list[1]))
+
+    
 
