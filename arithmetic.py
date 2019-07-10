@@ -8,7 +8,9 @@ def add(num1, num2):
 
 def subtract(num1, num2):
     """Return the second number subtracted from the first."""
+    return num1 - num2
 
+print(subtract(5,2))
 
 def multiply(num1, num2):
     """Multiply the two inputs together."""
