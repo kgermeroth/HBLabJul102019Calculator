@@ -42,4 +42,10 @@ while True:
     elif token_list[0].startswith("add") or token_list[0] == "+":
         print(add(token_list[1], token_list[2]))
 
-    elif 
+    elif token_list[0].startswith("sub") or token_list[0] =="-":
+        print(subtract(token_list[1], token_list[2]))
+
+    elif token_list[0].startswith("mul") or token_list[0] == "*":
+        print(multiply(token_list[1], token_list[2]))
+
+
