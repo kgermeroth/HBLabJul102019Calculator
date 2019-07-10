@@ -60,5 +60,10 @@ while True:
     elif token_list[0].startswith("pow"):
         print(power(token_list[1], token_list[2]))
 
+    elif token_list[0].startswith("mod") or token_list[0] == "%":
+        print(mod(token_list[1], token_list[2]))
+    else:
+        print("that is not a valid input, try again! ")
+
 
 
