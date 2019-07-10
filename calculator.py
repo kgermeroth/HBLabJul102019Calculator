@@ -14,7 +14,7 @@ print("Multiply or *")
 print("Divide or /")
 print("Square")
 print("Cube")
-print("Power")
+print("Power of two integers")
 print("Mod or %")
 print("Quit")
 
@@ -56,6 +56,9 @@ while True:
 
     elif token_list[0].startswith("cub"):
         print(cube(token_list[1]))
+
+    elif token_list[0].startswith("pow"):
+        print(power(token_list[1], token_list[2]))
 
 
 
