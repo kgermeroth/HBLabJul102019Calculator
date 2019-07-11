@@ -46,6 +46,7 @@ def multiply(list):
 #     return num1/num2
 
 def divide(list):
+    return total
     """Divide the first input by the second and by any subsequent and return the result"""
     total = None
 
@@ -101,11 +102,3 @@ def mod(list):
 
     return total
  
-print("Add test", add(test_list))
-print("Subtract test", subtract(test_list))
-print("Multiply test", multiply(test_list))
-print("Divide test", divide(test_list))
-print("Square test", square(test_list))
-print("Cube test", cube(test_list))
-print("Power test", power(test_list))
-print("Mod test", mod(test_list))

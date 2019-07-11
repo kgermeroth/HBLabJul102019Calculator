@@ -33,40 +33,39 @@ while True:
         if item.isdigit():
             token_list[idx] = int(token_list[idx])
 
-    operator, x, *other_nums = token_list
-
-    if len(token_list) == 3:
-        y = other_nums[0]
-
+    operator, *other_nums = token_list
+    
 #     if the first token is "q":
     if operator.startswith("q"):
         break
 #         quit
+
+
 #     else:
 #         decide which math function to call based on first token
     elif operator.startswith("add") or operator == "+":
-        print(add(x, y))
+        print(add(other_nums))
 
     elif operator.startswith("sub") or operator =="-":
-        print(subtract(x, y))
+        print(subtract(other_nums))
 
     elif operator.startswith("mul") or operator == "*":
-        print(multiply(x, y))
+        print(multiply(other_nums))
 
     elif operator.startswith("div") or operator == "/":
-        print(divide(x, y))
+        print(divide(other_nums))
 
     elif operator.startswith("squ"):
-        print(square(x))
+        print(square(other_nums))
 
     elif operator.startswith("cub"):
-        print(cube(x))
+        print(cube(other_nums))
 
     elif operator.startswith("pow"):
-        print(power(x, y))
+        print(power(other_nums))
 
     elif operator.startswith("mod") or operator == "%":
-        print(mod(x, y))
+        print(mod(other_nums))
 
     else:
         print("that is not a valid input, try again! ")
