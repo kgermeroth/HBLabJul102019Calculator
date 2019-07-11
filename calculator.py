@@ -33,35 +33,41 @@ while True:
         if item.isdigit():
             token_list[idx] = int(token_list[idx])
 
+    operator, x, *other_nums = token_list
+
+    if len(token_list) == 3:
+        y = other_nums[0]
+
 #     if the first token is "q":
-    if token_list[0].startswith("q"):
+    if operator.startswith("q"):
         break
 #         quit
 #     else:
 #         decide which math function to call based on first token
-    elif token_list[0].startswith("add") or token_list[0] == "+":
-        print(add(token_list[1], token_list[2]))
+    elif operator.startswith("add") or operator == "+":
+        print(add(x, y))
 
-    elif token_list[0].startswith("sub") or token_list[0] =="-":
-        print(subtract(token_list[1], token_list[2]))
+    elif operator.startswith("sub") or operator =="-":
+        print(subtract(x, y))
 
-    elif token_list[0].startswith("mul") or token_list[0] == "*":
-        print(multiply(token_list[1], token_list[2]))
+    elif operator.startswith("mul") or operator == "*":
+        print(multiply(x, y))
 
-    elif token_list[0].startswith("div") or token_list[0] == "/":
-        print(divide(token_list[1], token_list[2]))
+    elif operator.startswith("div") or operator == "/":
+        print(divide(x, y))
 
-    elif token_list[0].startswith("squ"):
-        print(square(token_list[1]))
+    elif operator.startswith("squ"):
+        print(square(x))
 
-    elif token_list[0].startswith("cub"):
-        print(cube(token_list[1]))
+    elif operator.startswith("cub"):
+        print(cube(x))
 
-    elif token_list[0].startswith("pow"):
-        print(power(token_list[1], token_list[2]))
+    elif operator.startswith("pow"):
+        print(power(x, y))
 
-    elif token_list[0].startswith("mod") or token_list[0] == "%":
-        print(mod(token_list[1], token_list[2]))
+    elif operator.startswith("mod") or operator == "%":
+        print(mod(x, y))
+
     else:
         print("that is not a valid input, try again! ")
 
